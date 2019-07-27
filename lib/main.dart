@@ -1,27 +1,24 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(
-      MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: "hello flutter",
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text("Hello Flutter"),
-          ),
-          body: Center(
-            child: Container(
-              color: Colors.blueAccent,
-              height: 400,
-              width: 300,
-              child: Center(
-                child: Text(
-                  "Hello Flutter",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.black, fontSize: 14),
-                ),
-              ),
-            ),
-          ),
+import 'Category.dart';
+
+void main() => runApp(UnitConverterApp());
+
+class UnitConverterApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Unit Converter',
+      home: Scaffold(
+        backgroundColor: Colors.green[100],
+        body: Center(
+          child: Category(
+              icon: Icons.access_alarm,
+              color: Colors.green,
+              name: "Alarm"),
         ),
       ),
     );
+  }
+}
